@@ -39,7 +39,7 @@
         --light-silver: #e6e6e6;
         --gold: #ffd700;
         --overlay: rgba(0, 0, 0, 0.3);
-        --gradient-primary: linear-gradient(135deg, #000000 0%, #333333 100%);
+        --gradient-primary: linear-gradient(135deg, #6ecfff 0%, #6eceff 100%);
         --gradient-secondary: linear-gradient(45deg, #ffd700 0%, #ffed4e 100%);
       }
 
@@ -371,6 +371,11 @@
         z-index: -1;
       }
 
+      /* Hide mobile video by default */
+      .mobile-video {
+        display: none;
+      }
+
       .hero-overlay {
         position: absolute;
         top: 0;
@@ -379,8 +384,8 @@
         height: 100%;
         background: linear-gradient(
           135deg,
-          rgba(0, 0, 0, 0.7) 0%,
-          rgba(0, 0, 0, 0.9) 100%
+          rgba(0, 0, 0, 0.3) 0%,
+          rgba(0, 0, 0, 0.5) 100%
         );
         z-index: -1;
       }
@@ -411,6 +416,17 @@
         margin-left: auto;
         margin-right: auto;
         line-height: 1.4;
+      }
+
+      /* Mobile: hide desktop video, show mobile video */
+      @media (max-width: 767.98px) {
+        .desktop-video {
+          display: none;
+        }
+
+        .mobile-video {
+          display: block;
+        }
       }
 
       .btn-primary {
@@ -1071,7 +1087,6 @@
           transform: translateX(-50%) translateY(-8px);
         }
       }
-
       /* Responsive Design */
       @media (max-width: 992px) {
         .hero-title {
@@ -1181,6 +1196,197 @@
         opacity: 1;
         transform: scale(1.2);
       }
+      /* #video-gallery .gallery-item.video-item {
+        height: 0;
+        padding-bottom: 133.33%; 
+        position: relative;
+        overflow: hidden;
+        border-radius: 0;
+      }
+
+      #video-gallery .gallery-item.video-item video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+
+      #video-gallery .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--overlay);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      #video-gallery .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      #video-gallery .gallery-item:hover video {
+        transform: scale(1.15);
+      }
+
+      #video-gallery .zoom-icon {
+        color: white;
+        font-size: 2.5rem;
+        background: var(--gradient-secondary);
+        padding: 15px;
+        border-radius: 50%;
+      } */
+      /* Ensure container respects aspect ratio */
+      /* Taller video: 3:4 aspect ratio (height = 1.33 × width) */
+      #video-gallery .gallery-item.video-item {
+        height: 0;
+        padding-bottom: 133.33%; /* 3:4 → (4/3)*100 ≈ 133.33% */
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        cursor: pointer;
+        background: #000;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        transition: transform 0.3s ease;
+      }
+
+      #video-gallery .gallery-item.video-item:hover {
+        transform: translateY(-6px);
+      }
+
+      #video-gallery .gallery-item.video-item video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+
+      #video-gallery .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+        pointer-events: none;
+      }
+
+      #video-gallery .gallery-item:hover .gallery-overlay,
+      #video-gallery .gallery-item:focus .gallery-overlay {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      #video-gallery .gallery-item:hover video,
+      #video-gallery .gallery-item:focus video {
+        transform: scale(1.15);
+      }
+
+      #video-gallery .zoom-icon {
+        color: white;
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        padding: 18px;
+        border-radius: 50%;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease;
+      }
+
+      #video-gallery .gallery-item:hover .zoom-icon,
+      #video-gallery .gallery-item:focus .zoom-icon {
+        transform: scale(1.25);
+      }
+
+      /* Hide overlay when video is playing */
+      #video-gallery .gallery-item.playing .gallery-overlay {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none;
+      }
+
+      /* Optional: Slightly smaller icon on mobile for balance */
+      @media (max-width: 767.98px) {
+        #video-gallery .zoom-icon {
+          font-size: 2.2rem;
+          padding: 16px;
+        }
+      }
+      /* Isolated Hero Detail Section */
+      /* Isolated styles for the detail hero image section */
+      .section-title-detail {
+        color: white;
+        font-size: 3rem;
+        position: relative;
+      }
+      .section-title-detail::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: var(--gradient-secondary);
+        border-radius: 2px;
+      }
+
+      .hero-detail-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--overlay);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .hero-detail-overlay:hover,
+      .position-relative:hover .hero-detail-overlay {
+        opacity: 1;
+      }
+
+      .zoom-icon-detail {
+        color: white;
+        font-size: 2.5rem;
+        background: var(--gradient-secondary);
+        padding: 15px;
+        border-radius: 50%;
+      }
+
+      /* Mobile image handling */
+      .hero-detail-mobile {
+        display: none; /* hidden by default */
+      }
+
+      @media (max-width: 768px) {
+        .hero-detail-desktop {
+          display: none; /* hide desktop image on mobile */
+        }
+        .hero-detail-mobile {
+          display: block; /* show mobile image */
+        }
+      }
     </style>
   </head>
   <body>
@@ -1233,30 +1439,41 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <video class="hero-video" autoplay muted loop playsinline>
-        <source src="1015(1).mp4" type="video/mp4" />
+      <!-- Desktop video -->
+      <video class="hero-video desktop-video" autoplay muted loop playsinline>
+        <source src="1015.mp4" type="video/mp4" />
       </video>
+
+      <!-- Mobile video -->
+      <video class="hero-video mobile-video" autoplay muted loop playsinline>
+        <source src="mobile query .mp4" type="video/mp4" />
+      </video>
+
+      <!-- Remove or comment out the .hero-image-mobile div since it's no longer needed -->
+      <!-- <div class="hero-image-mobile"></div> -->
+
+      <div class="hero-overlay"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
         <h1 class="hero-title">Stay Cool, Look Sharp</h1>
+        <h1 class="hero-title">With The Ceramic Film</h1>
         <p class="hero-subtitle">
           Premium Window Tint Solutions for Automotive, Residential & Commercial
           Properties
         </p>
         <a href="#contact" class="btn btn-primary">Get Your Free Quote</a>
         <div class="contact-info">
-          <p><i class="bi bi-telephone"></i> (916) 529-5624</p>
+          <!-- <p><i class="bi bi-telephone"></i> (916) 529-5624</p>
           <p>
             <i class="bi bi-geo-alt"></i> 9220 Greenback Ln, Orangevale, CA
             95662
-          </p>
+          </p> -->
         </div>
       </div>
       <div class="scroll-down">
         <i class="bi bi-chevron-down"></i>
       </div>
     </section>
-
     <!-- Stats Section -->
     <section class="stats-section">
       <div class="container">
@@ -1467,7 +1684,89 @@
         </div>
       </div>
     </section>
-
+    <!-- Video Gallery Section
+    <section id="video-gallery" class="section gallery-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Our Work in Motion</h2>
+        <div class="row g-0">
+        
+          <div class="col-6 col-md-3" data-aos="fade-up">
+            <div class="gallery-item video-item">
+              <video src="vid/V-1.mp4" loop playsinline></video>
+              <div class="gallery-overlay">
+                <i class="bi bi-play-fill zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-item video-item">
+              <video src="vid/V-2.mp4" loop playsinline></video>
+              <div class="gallery-overlay">
+                <i class="bi bi-play-fill zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="gallery-item video-item">
+              <video src="vid/V-3.mp4" loop playsinline></video>
+              <div class="gallery-overlay">
+                <i class="bi bi-play-fill zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="gallery-item video-item">
+              <video src="vid/V-4.mp4" loop playsinline></video>
+              <div class="gallery-overlay">
+                <i class="bi bi-play-fill zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Video Gallery Section -->
+    <!-- Video Gallery Section -->
+    <section id="video-gallery" class="section gallery-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Our Work in Motion</h2>
+        <div class="row g-4">
+          <!-- g-4 adds nice spacing -->
+          <div class="col-12 col-md-3" data-aos="fade-up">
+            <div class="gallery-item video-item" role="button" tabindex="0">
+              <video src="vid/V-1.mp4" loop playsinline></video>
+              <div class="gallery-overlay">
+                <i class="bi bi-play-fill zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-item video-item" role="button" tabindex="0">
+              <video src="vid/V-2.mp4" loop playsinline></video>
+              <div class="gallery-overlay">
+                <i class="bi bi-play-fill zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="gallery-item video-item" role="button" tabindex="0">
+              <video src="vid/V-3.mp4" loop playsinline></video>
+              <div class="gallery-overlay">
+                <i class="bi bi-play-fill zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="gallery-item video-item" role="button" tabindex="0">
+              <video src="vid/V-4.mp4" loop playsinline></video>
+              <div class="gallery-overlay">
+                <i class="bi bi-play-fill zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Process Section -->
     <section class="section process-section">
       <div class="container">
@@ -1659,6 +1958,41 @@
         </div>
       </div>
     </section>
+    <!-- Single Image Section -->
+    <!-- Single Image Section (Mobile-Optimized) -->
+    <section
+      id="hero-image-detail"
+      class="section bg-black p-0 d-flex flex-column align-items-center justify-content-center"
+      style="min-height: 100vh"
+    >
+      <h2 class="section-title text-light mb-5 text-center" data-aos="fade-up">
+        Excellence in Every Detail
+      </h2>
+      <div
+        class="position-relative w-100"
+        style="
+          max-width: 1200px;
+          width: 80%;
+          height: 80vh;
+          border-radius: 12px;
+          overflow: hidden;
+        "
+      >
+        <!-- Desktop Image -->
+        <img
+          src="one.png"
+          alt="Featured Tinting Project"
+          class="hero-detail-desktop w-100 h-100 object-fit-cover"
+        />
+        <!-- Mobile Image (hidden on desktop) -->
+        <img
+          src="14.png"
+          alt="Featured Tinting Project - Mobile"
+          class="hero-detail-mobile w-100 h-100 object-fit-cover"
+        />
+        <div class="hero-detail-overlay"></div>
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section section-overlay">
@@ -1754,7 +2088,7 @@
             </div>
             <div class="mt-4">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.345678901234!2d-121.12345678901234!3d38.76543210987654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.321398745632!2d-121.08752252432918!3d38.72063527184499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b3e4f4d8e9c8d%3A0x5c8e9b7a3a1c6a9f!2s9220%20Greenback%20Ln%20%23C%2C%20Orangevale%2C%20CA%2095662!5e0!3m2!1sen!2sus!4v1729276800000!5m2!1sen!2sus"
                 width="100%"
                 height="300"
                 style="border: 0; border-radius: 12px"
@@ -1927,6 +2261,46 @@
           if (link.getAttribute("href") === "#" + currentSection) {
             link.classList.add("active");
           }
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const items = document.querySelectorAll(
+          "#video-gallery .gallery-item.video-item"
+        );
+
+        items.forEach((item) => {
+          const video = item.querySelector("video");
+
+          item.addEventListener("click", async (e) => {
+            e.stopPropagation();
+
+            // Pause all other videos
+            items.forEach((i) => {
+              const v = i.querySelector("video");
+              if (v !== video && !v.paused) {
+                v.pause();
+                i.classList.remove("playing");
+              }
+            });
+
+            if (video.paused) {
+              try {
+                await video.play();
+                item.classList.add("playing");
+              } catch (err) {
+                console.warn("Playback failed:", err);
+                item.classList.remove("playing");
+              }
+            } else {
+              video.pause();
+              item.classList.remove("playing");
+            }
+          });
+
+          video.addEventListener("ended", () => {
+            item.classList.remove("playing");
+          });
         });
       });
     </script>
