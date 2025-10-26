@@ -1110,7 +1110,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- <section id="home" class="hero">
       <video
         class="hero-video desktop-video"
         autoplay
@@ -1143,6 +1143,45 @@
         </p>
         <a href="#contact" class="btn btn-primary">Get Your Free Quote</a>
       </div>
+      <div class="scroll-down"><i class="bi bi-chevron-down"></i></div>
+    </section> -->
+    <section id="home" class="hero">
+      <video
+        class="hero-video desktop-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="12.webp"
+      >
+        <source src="1015.mp4" type="video/mp4" />
+      </video>
+
+      <video
+        id="mobileVideo"
+        class="hero-video mobile-video"
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="14.png"
+      >
+        <source src="mobile-query.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+        <h1 class="hero-title">Stay Cool, Look Sharp</h1>
+        <h1 class="hero-title">With The Ceramic Film</h1>
+        <p class="hero-subtitle">
+          Premium Window Tint Solutions for Automotive, Residential & Commercial
+          Properties
+        </p>
+        <a href="#contact" class="btn btn-primary">Get Your Free Quote</a>
+      </div>
+
       <div class="scroll-down"><i class="bi bi-chevron-down"></i></div>
     </section>
 
@@ -1870,6 +1909,34 @@
             item.classList.remove("playing")
           );
         });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileVideo = document.getElementById("mobileVideo");
+
+        if (window.innerWidth < 768 && mobileVideo) {
+          const playPromise = mobileVideo.play();
+
+          if (playPromise !== undefined) {
+            playPromise
+              .then(() => {
+                console.log("Mobile video autoplay started ✅");
+              })
+              .catch(() => {
+                console.warn(
+                  "Autoplay blocked, waiting for user interaction..."
+                );
+                document.addEventListener(
+                  "touchstart",
+                  () => {
+                    mobileVideo.play();
+                  },
+                  { once: true }
+                );
+              });
+          }
+        }
       });
     </script>
   </body>
