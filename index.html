@@ -3,12 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sunblock Window Tint, LLC | Premium Automotive & Residential Tinting</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <title>
+      Sunblock Window Tint, LLC | Premium Automotive & Residential Tinting
+    </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         --primary-black: #353030;
@@ -31,7 +45,12 @@
         color: var(--charcoal);
         overflow-x: hidden;
       }
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         font-family: "Montserrat", sans-serif;
         font-weight: 800;
         line-height: 1.2;
@@ -78,9 +97,17 @@
         animation: shine 2s infinite;
       }
       @keyframes shine {
-        0% { transform: translateX(-100%) translateY(-50%); opacity: 0; }
-        50% { opacity: 1; }
-        100% { transform: translateX(100%) translateY(-50%); opacity: 0; }
+        0% {
+          transform: translateX(-100%) translateY(-50%);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(100%) translateY(-50%);
+          opacity: 0;
+        }
       }
       .loading-text {
         font-family: "Open Sans", sans-serif;
@@ -92,8 +119,13 @@
         line-height: 1.4;
       }
       @keyframes pulse {
-        0%, 100% { opacity: 0.6; }
-        50% { opacity: 1; }
+        0%,
+        100% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 1;
+        }
       }
 
       /* Navbar */
@@ -166,14 +198,20 @@
         object-fit: cover;
         z-index: -1;
       }
-      .mobile-video { display: none; }
+      .mobile-video {
+        display: none;
+      }
       .hero-overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.3) 0%,
+          rgba(0, 0, 0, 0.5) 100%
+        );
         z-index: -1;
       }
       .hero-content {
@@ -186,7 +224,7 @@
       .hero-title {
         font-size: 4.5rem;
         margin-bottom: 1.5rem;
-        text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         background: linear-gradient(to right, white, #ffd700);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -202,10 +240,18 @@
         line-height: 1.4;
       }
       @media (max-width: 767.98px) {
-        .desktop-video { display: none; }
-        .mobile-video { display: block; }
-        .hero-title { font-size: 2.8rem; }
-        .hero-subtitle { font-size: 1.4rem; }
+        .desktop-video {
+          display: none;
+        }
+        .mobile-video {
+          display: block;
+        }
+        .hero-title {
+          font-size: 2.8rem;
+        }
+        .hero-subtitle {
+          font-size: 1.4rem;
+        }
       }
       .btn-primary {
         background: transparent;
@@ -224,7 +270,7 @@
       .btn-primary:hover {
         background: var(--gradient-secondary);
         color: var(--primary-black);
-        box-shadow: 0 0 40px rgba(255,215,0,0.6);
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
         transform: translateY(-3px);
       }
       .btn-primary::before {
@@ -234,10 +280,17 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
         transition: left 0.6s;
       }
-      .btn-primary:hover::before { left: 100%; }
+      .btn-primary:hover::before {
+        left: 100%;
+      }
       .contact-info {
         margin-top: 2.5rem;
         color: var(--light-silver);
@@ -249,13 +302,24 @@
         animation: pulse-icon 2s infinite;
       }
       @keyframes pulse-icon {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.2); }
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
       }
 
       /* Sections */
-      .section { padding: 120px 0; position: relative; }
-      .section-overlay { background: var(--gradient-primary); padding: 120px 0; }
+      .section {
+        padding: 120px 0;
+        position: relative;
+      }
+      .section-overlay {
+        background: var(--gradient-primary);
+        padding: 120px 0;
+      }
       .section-title {
         text-align: center;
         margin-bottom: 4rem;
@@ -263,7 +327,9 @@
         font-size: 3rem;
         position: relative;
       }
-      .section-title.text-white { color: white; }
+      .section-title.text-white {
+        color: white;
+      }
       .section-title::after {
         content: "";
         position: absolute;
@@ -288,7 +354,11 @@
         flex-wrap: wrap;
         gap: 30px;
       }
-      .stat-item { text-align: center; padding: 20px; min-width: 150px; }
+      .stat-item {
+        text-align: center;
+        padding: 20px;
+        min-width: 150px;
+      }
       .stat-number {
         font-size: 3rem;
         font-weight: 900;
@@ -298,13 +368,16 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
-      .stat-label { font-size: 1.1rem; font-weight: 300; }
+      .stat-label {
+        font-size: 1.1rem;
+        font-weight: 300;
+      }
 
       /* About */
       .about-image {
         border-radius: 12px;
         overflow: hidden;
-        box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
         position: relative;
       }
       .about-image img {
@@ -312,9 +385,17 @@
         height: auto;
         transition: transform 0.6s ease;
       }
-      .about-image:hover img { transform: scale(1.08); }
-      .about-content { padding-left: 30px; }
-      .about-content h3 { font-size: 2.2rem; margin-bottom: 20px; color: var(--primary-black); }
+      .about-image:hover img {
+        transform: scale(1.08);
+      }
+      .about-content {
+        padding-left: 30px;
+      }
+      .about-content h3 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        color: var(--primary-black);
+      }
 
       /* Services */
       .service-card {
@@ -325,7 +406,7 @@
         transition: all 0.5s ease;
         height: 100%;
         backdrop-filter: blur(15px);
-        border: 1px solid rgba(255,255,255,0.15);
+        border: 1px solid rgba(255, 255, 255, 0.15);
         position: relative;
         overflow: hidden;
       }
@@ -341,11 +422,13 @@
         transform-origin: left;
         transition: transform 0.5s ease;
       }
-      .service-card:hover::before { transform: scaleX(1); }
+      .service-card:hover::before {
+        transform: scaleX(1);
+      }
       .service-card:hover {
         transform: translateY(-15px) scale(1.03);
-        box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-        border: 1px solid rgba(255,255,255,0.4);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.4);
       }
       .service-card i {
         font-size: 3rem;
@@ -355,21 +438,31 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
-      .service-card h3 { color: white; margin-top: 1.5rem; font-size: 1.6rem; margin-bottom: 1rem; }
-      .service-card p { color: white; }
+      .service-card h3 {
+        color: white;
+        margin-top: 1.5rem;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+      .service-card p {
+        color: white;
+      }
 
       /* Why Choose Us */
-      .why-section { background: var(--gradient-primary); color: white; }
+      .why-section {
+        background: var(--gradient-primary);
+        color: white;
+      }
       .why-item {
         text-align: center;
         padding: 2.5rem;
         border-radius: 12px;
         transition: transform 0.4s ease;
-        background: rgba(255,255,255,0.05);
+        background: rgba(255, 255, 255, 0.05);
       }
       .why-item:hover {
         transform: translateY(-10px);
-        background: rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.1);
       }
       .why-icon {
         width: 100px;
@@ -382,17 +475,23 @@
         margin: 0 auto 2rem;
         font-size: 2.5rem;
         color: var(--primary-black);
-        box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
       }
-      .why-item h3 { color: white; margin-bottom: 1.2rem; font-size: 1.8rem; }
+      .why-item h3 {
+        color: white;
+        margin-bottom: 1.2rem;
+        font-size: 1.8rem;
+      }
 
       /* Testimonials */
-      .testimonials-section { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+      .testimonials-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      }
       .testimonial-card {
         background: white;
         border-radius: 15px;
         padding: 30px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         margin: 15px;
         position: relative;
       }
@@ -406,8 +505,15 @@
         font-family: "Montserrat", sans-serif;
         opacity: 0.2;
       }
-      .testimonial-content { font-style: italic; margin-bottom: 20px; line-height: 1.6; }
-      .testimonial-author { display: flex; align-items: center; }
+      .testimonial-content {
+        font-style: italic;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+      }
       .testimonial-author img {
         width: 50px;
         height: 50px;
@@ -415,12 +521,21 @@
         margin-right: 15px;
         object-fit: cover;
       }
-      .testimonial-author-info h4 { margin-bottom: 5px; }
-      .testimonial-author-info p { color: var(--silver); font-size: 0.9rem; }
+      .testimonial-author-info h4 {
+        margin-bottom: 5px;
+      }
+      .testimonial-author-info p {
+        color: var(--silver);
+        font-size: 0.9rem;
+      }
 
       /* Gallery */
-      .gallery-section { background: #f8f9fa; }
-      .gallery-container { position: relative; }
+      .gallery-section {
+        background: #f8f9fa;
+      }
+      .gallery-container {
+        position: relative;
+      }
       .gallery-item {
         position: relative;
         border-radius: 12px;
@@ -448,8 +563,12 @@
         opacity: 0;
         transition: opacity 0.4s ease;
       }
-      .gallery-item:hover .gallery-overlay { opacity: 1; }
-      .gallery-item:hover img { transform: scale(1.15); }
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+      .gallery-item:hover img {
+        transform: scale(1.15);
+      }
       .zoom-icon {
         color: white;
         font-size: 2.5rem;
@@ -469,7 +588,9 @@
         background: transparent;
         transition: transform 0.3s ease;
       }
-      #video-gallery .gallery-item.video-item:hover { transform: translateY(-6px); }
+      #video-gallery .gallery-item.video-item:hover {
+        transform: translateY(-6px);
+      }
       #video-gallery .gallery-item.video-item video {
         position: absolute;
         top: 0;
@@ -510,7 +631,7 @@
         background: linear-gradient(135deg, #252323, #312e2e);
         padding: 18px;
         border-radius: 50%;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
         transition: transform 0.3s ease;
       }
       #video-gallery .gallery-item:hover .zoom-icon,
@@ -523,11 +644,17 @@
         pointer-events: none;
       }
       @media (max-width: 767.98px) {
-        #video-gallery .zoom-icon { font-size: 2.2rem; padding: 16px; }
+        #video-gallery .zoom-icon {
+          font-size: 2.2rem;
+          padding: 16px;
+        }
       }
 
       /* Process */
-      .process-section { background: var(--gradient-primary); color: white; }
+      .process-section {
+        background: var(--gradient-primary);
+        color: white;
+      }
       .process-steps {
         display: flex;
         justify-content: space-between;
@@ -544,7 +671,11 @@
         background: var(--silver);
         z-index: 1;
       }
-      .process-step { text-align: center; position: relative; z-index: 2; }
+      .process-step {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
       .process-circle {
         width: 100px;
         height: 100px;
@@ -557,9 +688,12 @@
         font-size: 2rem;
         color: var(--primary-black);
         font-weight: 900;
-        box-shadow: 0 10px 30px rgba(255,215,0,0.4);
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
       }
-      .process-step h4 { font-size: 1.4rem; margin-bottom: 10px; }
+      .process-step h4 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
 
       /* Contact */
       .contact-form {
@@ -567,22 +701,24 @@
         padding: 3rem;
         border-radius: 15px;
         backdrop-filter: blur(15px);
-        border: 1px solid rgba(255,255,255,0.15);
+        border: 1px solid rgba(255, 255, 255, 0.15);
       }
       .form-control {
-        background: rgba(255,255,255,0.1);
-        border: 1px solid rgba(255,255,255,0.2);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         color: white;
         padding: 15px 20px;
         border-radius: 0;
         font-size: 1rem;
         transition: all 0.3s ease;
       }
-      .form-control::placeholder { color: var(--light-silver); }
+      .form-control::placeholder {
+        color: var(--light-silver);
+      }
       .form-control:focus {
-        background: rgba(255,255,255,0.15);
+        background: rgba(255, 255, 255, 0.15);
         border-color: var(--gold);
-        box-shadow: 0 0 0 3px rgba(255,215,0,0.3);
+        box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
         color: white;
         outline: none;
       }
@@ -600,9 +736,11 @@
       }
       .btn-contact:hover {
         transform: translateY(-3px);
-        box-shadow: 0 10px 30px rgba(255,215,0,0.5);
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
       }
-      .contact-details { margin-top: 2.5rem; }
+      .contact-details {
+        margin-top: 2.5rem;
+      }
       .contact-detail-item {
         display: flex;
         align-items: flex-start;
@@ -622,7 +760,10 @@
         color: var(--primary-black);
         flex-shrink: 0;
       }
-      .contact-detail-item h4 { margin-bottom: 5px; font-size: 1.2rem; }
+      .contact-detail-item h4 {
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+      }
 
       /* Footer */
       .footer {
@@ -639,7 +780,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: radial-gradient(circle at top right, rgba(255,215,0,0.1) 0%, transparent 50%);
+        background: radial-gradient(
+          circle at top right,
+          rgba(255, 215, 0, 0.1) 0%,
+          transparent 50%
+        );
       }
       .footer h3 {
         color: white;
@@ -696,7 +841,7 @@
         border-color: var(--gold);
       }
       .copyright {
-        border-top: 1px solid rgba(255,255,255,0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         padding-top: 2.5rem;
         margin-top: 4rem;
         text-align: center;
@@ -718,20 +863,28 @@
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        box-shadow: 0 10px 30px rgba(255,215,0,0.4);
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
         z-index: 1000;
         transition: all 0.4s ease;
         animation: floating 3s ease-in-out infinite;
       }
       @keyframes floating {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
       }
       .floating-call:hover {
         transform: scale(1.15) rotate(10deg);
-        box-shadow: 0 15px 40px rgba(255,215,0,0.6);
+        box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
       }
-      .floating-call i { font-size: 1.8rem; font-weight: bold; }
+      .floating-call i {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
 
       /* Scroll Down */
       .scroll-down {
@@ -745,47 +898,103 @@
       }
       .scroll-down i {
         font-size: 2rem;
-        background: rgba(255,255,255,0.2);
+        background: rgba(255, 255, 255, 0.2);
         padding: 15px;
         border-radius: 50%;
         animation: pulse 2s infinite;
       }
       @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-        40% { transform: translateX(-50%) translateY(-15px); }
-        60% { transform: translateX(-50%) translateY(-8px); }
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        40% {
+          transform: translateX(-50%) translateY(-15px);
+        }
+        60% {
+          transform: translateX(-50%) translateY(-8px);
+        }
       }
 
       /* Responsive */
       @media (max-width: 992px) {
-        .hero-title { font-size: 3.5rem; }
-        .section { padding: 80px 0; }
-        .section-overlay { padding: 80px 0; }
-        .process-steps { flex-direction: column; align-items: center; }
-        .process-steps::before { display: none; }
-        .process-step { margin-bottom: 40px; }
+        .hero-title {
+          font-size: 3.5rem;
+        }
+        .section {
+          padding: 80px 0;
+        }
+        .section-overlay {
+          padding: 80px 0;
+        }
+        .process-steps {
+          flex-direction: column;
+          align-items: center;
+        }
+        .process-steps::before {
+          display: none;
+        }
+        .process-step {
+          margin-bottom: 40px;
+        }
       }
       @media (max-width: 768px) {
-        .hero-title { font-size: 2.8rem; }
-        .hero-subtitle { font-size: 1.4rem; }
-        .section-title { font-size: 2.2rem; }
-        .navbar-nav .nav-link { margin: 0.5rem 0; font-size: 1rem; }
-        .contact-form { padding: 2rem; }
-        .footer { padding: 3rem 0 2rem; }
+        .hero-title {
+          font-size: 2.8rem;
+        }
+        .hero-subtitle {
+          font-size: 1.4rem;
+        }
+        .section-title {
+          font-size: 2.2rem;
+        }
+        .navbar-nav .nav-link {
+          margin: 0.5rem 0;
+          font-size: 1rem;
+        }
+        .contact-form {
+          padding: 2rem;
+        }
+        .footer {
+          padding: 3rem 0 2rem;
+        }
       }
       @media (max-width: 576px) {
-        .hero-title { font-size: 2.2rem; }
-        .hero-subtitle { font-size: 1.2rem; }
-        .floating-call { width: 60px; height: 60px; }
-        .floating-call i { font-size: 1.5rem; }
-        .stat-item { min-width: 120px; }
-        .stat-number { font-size: 2.2rem; }
+        .hero-title {
+          font-size: 2.2rem;
+        }
+        .hero-subtitle {
+          font-size: 1.2rem;
+        }
+        .floating-call {
+          width: 60px;
+          height: 60px;
+        }
+        .floating-call i {
+          font-size: 1.5rem;
+        }
+        .stat-item {
+          min-width: 120px;
+        }
+        .stat-number {
+          font-size: 2.2rem;
+        }
       }
 
       /* Swiper */
-      .swiper { padding: 20px 0; }
-      .swiper-slide { text-align: center; }
-      .swiper-pagination { position: relative; margin-top: 30px; }
+      .swiper {
+        padding: 20px 0;
+      }
+      .swiper-slide {
+        text-align: center;
+      }
+      .swiper-pagination {
+        position: relative;
+        margin-top: 30px;
+      }
       .swiper-pagination-bullet {
         width: 12px;
         height: 12px;
@@ -829,7 +1038,9 @@
         opacity: 0;
         transition: opacity 0.4s ease;
       }
-      .position-relative:hover .hero-detail-overlay { opacity: 1; }
+      .position-relative:hover .hero-detail-overlay {
+        opacity: 1;
+      }
       .zoom-icon-detail {
         color: white;
         font-size: 2.5rem;
@@ -837,10 +1048,16 @@
         padding: 15px;
         border-radius: 50%;
       }
-      .hero-detail-mobile { display: none; }
+      .hero-detail-mobile {
+        display: none;
+      }
       @media (max-width: 768px) {
-        .hero-detail-desktop { display: none; }
-        .hero-detail-mobile { display: block; }
+        .hero-detail-desktop {
+          display: none;
+        }
+        .hero-detail-mobile {
+          display: block;
+        }
       }
     </style>
   </head>
@@ -857,18 +1074,33 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#home">SUNBLOCK</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#why">Why Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -876,17 +1108,36 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <video class="hero-video desktop-video" autoplay muted loop playsinline preload="metadata" poster="hero-poster.jpg">
+      <video
+        class="hero-video desktop-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="12.webp"
+      >
         <source src="1015.mp4" type="video/mp4" />
       </video>
-      <video class="hero-video mobile-video" autoplay muted loop playsinline preload="metadata" poster="hero-mobile-poster.jpg">
+      <video
+        class="hero-video mobile-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="14.png"
+      >
         <source src="mobile-query.mp4" type="video/mp4" />
       </video>
       <div class="hero-overlay"></div>
       <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
         <h1 class="hero-title">Stay Cool, Look Sharp</h1>
         <h1 class="hero-title">With The Ceramic Film</h1>
-        <p class="hero-subtitle">Premium Window Tint Solutions for Automotive, Residential & Commercial Properties</p>
+        <p class="hero-subtitle">
+          Premium Window Tint Solutions for Automotive, Residential & Commercial
+          Properties
+        </p>
         <a href="#contact" class="btn btn-primary">Get Your Free Quote</a>
       </div>
       <div class="scroll-down"><i class="bi bi-chevron-down"></i></div>
@@ -896,10 +1147,22 @@
     <section class="stats-section">
       <div class="container">
         <div class="stats-container" data-aos="fade-up">
-          <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label">Years Experience</div></div>
-          <div class="stat-item"><div class="stat-number">5000+</div><div class="stat-label">Happy Customers</div></div>
-          <div class="stat-item"><div class="stat-number">99%</div><div class="stat-label">UV Protection</div></div>
-          <div class="stat-item"><div class="stat-number">Lifetime</div><div class="stat-label">Warranty</div></div>
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5000+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">99%</div>
+            <div class="stat-label">UV Protection</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">Lifetime</div>
+            <div class="stat-label">Warranty</div>
+          </div>
         </div>
       </div>
     </section>
@@ -907,18 +1170,45 @@
     <!-- About -->
     <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title" data-aos="fade-up">About Sunblock Window Tint, LLC</h2>
+        <h2 class="section-title" data-aos="fade-up">
+          About Sunblock Window Tint, LLC
+        </h2>
         <div class="row align-items-center">
-          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
-            <div class="about-image"><img src="about.jpg" alt="Professional Window Tinting" /></div>
+          <div
+            class="col-lg-6 mb-4 mb-lg-0"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <div class="about-image">
+              <img src="about.jpg" alt="Professional Window Tinting" />
+            </div>
           </div>
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
               <h3>Orangevale's Premier Tinting Specialists</h3>
-              <p class="lead">With over a decade of experience in the automotive and residential glass tinting industry, Sunblock Window Tint, LLC has established itself as Orangevale's premier choice for premium window film solutions.</p>
-              <p class="mt-3">We pride ourselves on using only the highest quality materials from industry-leading manufacturers like 3M, Llumar, and Suntek. Our certified technicians are passionate about delivering flawless installations that exceed industry standards.</p>
-              <p class="mt-3">From luxury vehicles to commercial buildings, we provide customized tinting solutions that enhance privacy, reduce heat by up to 60%, protect against 99% of harmful UV rays, and elevate the aesthetic appeal of any glass surface.</p>
-              <p class="mt-3">Our commitment to customer satisfaction ensures that every project meets our rigorous standards of excellence, backed by our comprehensive lifetime warranty.</p>
+              <p class="lead">
+                With over a decade of experience in the automotive and
+                residential glass tinting industry, Sunblock Window Tint, LLC
+                has established itself as Orangevale's premier choice for
+                premium window film solutions.
+              </p>
+              <p class="mt-3">
+                We pride ourselves on using only the highest quality materials
+                from industry-leading manufacturers like 3M, Llumar, and Suntek.
+                Our certified technicians are passionate about delivering
+                flawless installations that exceed industry standards.
+              </p>
+              <p class="mt-3">
+                From luxury vehicles to commercial buildings, we provide
+                customized tinting solutions that enhance privacy, reduce heat
+                by up to 60%, protect against 99% of harmful UV rays, and
+                elevate the aesthetic appeal of any glass surface.
+              </p>
+              <p class="mt-3">
+                Our commitment to customer satisfaction ensures that every
+                project meets our rigorous standards of excellence, backed by
+                our comprehensive lifetime warranty.
+              </p>
             </div>
           </div>
         </div>
@@ -928,34 +1218,65 @@
     <!-- Services -->
     <section id="services" class="section section-overlay">
       <div class="container">
-        <h2 class="section-title text-white" data-aos="fade-up">Our Premium Services</h2>
+        <h2 class="section-title text-white" data-aos="fade-up">
+          Our Premium Services
+        </h2>
         <div class="row">
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="col-md-6 col-lg-3 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="service-card">
               <i class="bi bi-car-front-fill"></i>
               <h3>Auto Window Tinting</h3>
-              <p>Professional automotive tinting with premium films for enhanced privacy, UV protection, glare reduction, and unmatched style.</p>
+              <p>
+                Professional automotive tinting with premium films for enhanced
+                privacy, UV protection, glare reduction, and unmatched style.
+              </p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="col-md-6 col-lg-3 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="service-card">
               <i class="bi bi-house-door-fill"></i>
               <h3>Residential & Commercial</h3>
-              <p>Complete glass tinting solutions for homes and businesses to improve energy efficiency, reduce cooling costs, and enhance comfort.</p>
+              <p>
+                Complete glass tinting solutions for homes and businesses to
+                improve energy efficiency, reduce cooling costs, and enhance
+                comfort.
+              </p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="col-md-6 col-lg-3 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div class="service-card">
               <i class="bi bi-shield"></i>
               <h3>Ceramic Film Installation</h3>
-              <p>Advanced ceramic films that provide superior heat rejection without interfering with GPS, cell phone, or radio signals.</p>
+              <p>
+                Advanced ceramic films that provide superior heat rejection
+                without interfering with GPS, cell phone, or radio signals.
+              </p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="col-md-6 col-lg-3 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div class="service-card">
               <i class="bi bi-sun"></i>
               <h3>UV & Heat Protection</h3>
-              <p>Specialized films that block up to 99% of harmful UV rays and significantly reduce solar heat gain, protecting your interiors.</p>
+              <p>
+                Specialized films that block up to 99% of harmful UV rays and
+                significantly reduce solar heat gain, protecting your interiors.
+              </p>
             </div>
           </div>
         </div>
@@ -965,34 +1286,60 @@
     <!-- Why Choose Us -->
     <section id="why" class="section why-section">
       <div class="container">
-        <h2 class="section-title text-white" data-aos="fade-up">Why Choose Us</h2>
+        <h2 class="section-title text-white" data-aos="fade-up">
+          Why Choose Us
+        </h2>
         <div class="row">
           <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up">
             <div class="why-item">
               <div class="why-icon"><i class="bi bi-award"></i></div>
               <h3>10+ Years Experience</h3>
-              <p>Over a decade of expertise in professional window tinting services with certified technicians.</p>
+              <p>
+                Over a decade of expertise in professional window tinting
+                services with certified technicians.
+              </p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="col-md-6 col-lg-3 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="why-item">
               <div class="why-icon"><i class="bi bi-stars"></i></div>
               <h3>Premium Film Materials</h3>
-              <p>Only the highest quality films from trusted industry-leading manufacturers like 3M and Llumar.</p>
+              <p>
+                Only the highest quality films from trusted industry-leading
+                manufacturers like 3M and Llumar.
+              </p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="col-md-6 col-lg-3 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="why-item">
               <div class="why-icon"><i class="bi bi-patch-check"></i></div>
               <h3>Lifetime Warranty</h3>
-              <p>Comprehensive warranty coverage for your peace of mind and long-term satisfaction.</p>
+              <p>
+                Comprehensive warranty coverage for your peace of mind and
+                long-term satisfaction.
+              </p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="col-md-6 col-lg-3 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div class="why-item">
               <div class="why-icon"><i class="bi bi-geo-alt"></i></div>
               <h3>Local Experts</h3>
-              <p>Proudly serving Orangevale, CA and surrounding communities with personalized, professional service.</p>
+              <p>
+                Proudly serving Orangevale, CA and surrounding communities with
+                personalized, professional service.
+              </p>
             </div>
           </div>
         </div>
@@ -1007,13 +1354,17 @@
           <div class="col-12 col-md-6" data-aos="fade-up">
             <div class="gallery-item video-item" role="button" tabindex="0">
               <video src="vid/V-1.mp4" loop playsinline></video>
-              <div class="gallery-overlay"><i class="bi bi-play-fill zoom-icon"></i></div>
+              <div class="gallery-overlay">
+                <i class="bi bi-play-fill zoom-icon"></i>
+              </div>
             </div>
           </div>
           <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="gallery-item video-item" role="button" tabindex="0">
               <video src="vid/V-3.mp4" loop playsinline></video>
-              <div class="gallery-overlay"><i class="bi bi-play-fill zoom-icon"></i></div>
+              <div class="gallery-overlay">
+                <i class="bi bi-play-fill zoom-icon"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -1023,27 +1374,41 @@
     <!-- Process -->
     <section class="section process-section">
       <div class="container">
-        <h2 class="section-title text-white" data-aos="fade-up">Our Simple Process</h2>
+        <h2 class="section-title text-white" data-aos="fade-up">
+          Our Simple Process
+        </h2>
         <div class="process-steps">
           <div class="process-step" data-aos="fade-up" data-aos-delay="100">
             <div class="process-circle">1</div>
             <h4>Consultation</h4>
-            <p>Free consultation to understand your needs and recommend the perfect solution.</p>
+            <p>
+              Free consultation to understand your needs and recommend the
+              perfect solution.
+            </p>
           </div>
           <div class="process-step" data-aos="fade-up" data-aos-delay="200">
             <div class="process-circle">2</div>
             <h4>Custom Quote</h4>
-            <p>Detailed, no-obligation quote with transparent pricing and timeline.</p>
+            <p>
+              Detailed, no-obligation quote with transparent pricing and
+              timeline.
+            </p>
           </div>
           <div class="process-step" data-aos="fade-up" data-aos-delay="300">
             <div class="process-circle">3</div>
             <h4>Professional Installation</h4>
-            <p>Precision installation by our certified technicians in our state-of-the-art facility.</p>
+            <p>
+              Precision installation by our certified technicians in our
+              state-of-the-art facility.
+            </p>
           </div>
           <div class="process-step" data-aos="fade-up" data-aos-delay="400">
             <div class="process-circle">4</div>
             <h4>Quality Assurance</h4>
-            <p>Final inspection and lifetime warranty registration for your complete satisfaction.</p>
+            <p>
+              Final inspection and lifetime warranty registration for your
+              complete satisfaction.
+            </p>
           </div>
         </div>
       </div>
@@ -1057,9 +1422,17 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="testimonial-card">
-                <p class="testimonial-content">Sunblock Window Tint transformed my Tesla Model S! The ceramic tint not only looks incredible but has reduced the interior temperature by at least 20 degrees. The team was professional, punctual, and the quality is unmatched.</p>
+                <p class="testimonial-content">
+                  Sunblock Window Tint transformed my Tesla Model S! The ceramic
+                  tint not only looks incredible but has reduced the interior
+                  temperature by at least 20 degrees. The team was professional,
+                  punctual, and the quality is unmatched.
+                </p>
                 <div class="testimonial-author">
-                  <img src="https://placehold.co/50x50/e9ecef/6c757d?text=JD" alt="John Davis" />
+                  <img
+                    src="https://placehold.co/50x50/e9ecef/6c757d?text=JD"
+                    alt="John Davis"
+                  />
                   <div class="testimonial-author-info">
                     <h4>John Davis</h4>
                     <p>Luxury Vehicle Owner</p>
@@ -1069,9 +1442,17 @@
             </div>
             <div class="swiper-slide">
               <div class="testimonial-card">
-                <p class="testimonial-content">I had my entire house tinted and the difference is amazing! My energy bills have dropped significantly, and the glare reduction has made my home so much more comfortable. Highly recommend their residential services!</p>
+                <p class="testimonial-content">
+                  I had my entire house tinted and the difference is amazing! My
+                  energy bills have dropped significantly, and the glare
+                  reduction has made my home so much more comfortable. Highly
+                  recommend their residential services!
+                </p>
                 <div class="testimonial-author">
-                  <img src="https://placehold.co/50x50/e9ecef/6c757d?text=SM" alt="Sarah Martinez" />
+                  <img
+                    src="https://placehold.co/50x50/e9ecef/6c757d?text=SM"
+                    alt="Sarah Martinez"
+                  />
                   <div class="testimonial-author-info">
                     <h4>Sarah Martinez</h4>
                     <p>Homeowner</p>
@@ -1081,9 +1462,17 @@
             </div>
             <div class="swiper-slide">
               <div class="testimonial-card">
-                <p class="testimonial-content">As a business owner, I needed commercial tinting that would protect my storefront while maintaining visibility. Sunblock delivered exactly what I needed with professional installation and excellent customer service.</p>
+                <p class="testimonial-content">
+                  As a business owner, I needed commercial tinting that would
+                  protect my storefront while maintaining visibility. Sunblock
+                  delivered exactly what I needed with professional installation
+                  and excellent customer service.
+                </p>
                 <div class="testimonial-author">
-                  <img src="https://placehold.co/50x50/e9ecef/6c757d?text=MR" alt="Michael Rodriguez" />
+                  <img
+                    src="https://placehold.co/50x50/e9ecef/6c757d?text=MR"
+                    alt="Michael Rodriguez"
+                  />
                   <div class="testimonial-author-info">
                     <h4>Michael Rodriguez</h4>
                     <p>Business Owner</p>
@@ -1102,22 +1491,107 @@
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">Our Work Showcase</h2>
         <div class="row g-4">
-          <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="gallery-item"><img src="1.webp" alt="Luxury Sedan Tint" /><div class="gallery-overlay"><i class="bi bi-zoom-in zoom-icon"></i></div></div></div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100"><div class="gallery-item"><img src="2.webp" alt="SUV Full Tint" /><div class="gallery-overlay"><i class="bi bi-zoom-in zoom-icon"></i></div></div></div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200"><div class="gallery-item"><img src="3.webp" alt="Residential Windows" /><div class="gallery-overlay"><i class="bi bi-zoom-in zoom-icon"></i></div></div></div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300"><div class="gallery-item"><img src="4.webp" alt="Commercial Building" /><div class="gallery-overlay"><i class="bi bi-zoom-in zoom-icon"></i></div></div></div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400"><div class="gallery-item"><img src="6.jpeg" alt="Before After Comparison" /><div class="gallery-overlay"><i class="bi bi-zoom-in zoom-icon"></i></div></div></div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500"><div class="gallery-item"><img src="7.jpeg" alt="Custom Design Work" /><div class="gallery-overlay"><i class="bi bi-zoom-in zoom-icon"></i></div></div></div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="gallery-item">
+              <img src="1.webp" alt="Luxury Sedan Tint" />
+              <div class="gallery-overlay">
+                <i class="bi bi-zoom-in zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="gallery-item">
+              <img src="2.webp" alt="SUV Full Tint" />
+              <div class="gallery-overlay">
+                <i class="bi bi-zoom-in zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="gallery-item">
+              <img src="3.webp" alt="Residential Windows" />
+              <div class="gallery-overlay">
+                <i class="bi bi-zoom-in zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="gallery-item">
+              <img src="4.webp" alt="Commercial Building" />
+              <div class="gallery-overlay">
+                <i class="bi bi-zoom-in zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="gallery-item">
+              <img src="6.jpeg" alt="Before After Comparison" />
+              <div class="gallery-overlay">
+                <i class="bi bi-zoom-in zoom-icon"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="gallery-item">
+              <img src="7.jpeg" alt="Custom Design Work" />
+              <div class="gallery-overlay">
+                <i class="bi bi-zoom-in zoom-icon"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Hero Detail -->
-    <section id="hero-image-detail" class="section bg-black p-0 d-flex flex-column align-items-center justify-content-center" style="min-height: 100vh">
-      <h2 class="section-title text-light mb-5 text-center" data-aos="fade-up">Excellence in Every Detail</h2>
-      <div class="position-relative w-100" style="max-width: 1200px; width: 80%; height: 80vh; border-radius: 12px; overflow: hidden;">
-        <img src="one.png" alt="Featured Tinting Project" class="hero-detail-desktop w-100 h-100 object-fit-cover" />
-        <img src="14.png" alt="Featured Tinting Project - Mobile" class="hero-detail-mobile w-100 h-100 object-fit-cover" />
+    <section
+      id="hero-image-detail"
+      class="section bg-black p-0 d-flex flex-column align-items-center justify-content-center"
+      style="min-height: 100vh"
+    >
+      <h2 class="section-title text-light mb-5 text-center" data-aos="fade-up">
+        Excellence in Every Detail
+      </h2>
+      <div
+        class="position-relative w-100"
+        style="
+          max-width: 1200px;
+          width: 80%;
+          height: 80vh;
+          border-radius: 12px;
+          overflow: hidden;
+        "
+      >
+        <img
+          src="one.png"
+          alt="Featured Tinting Project"
+          class="hero-detail-desktop w-100 h-100 object-fit-cover"
+        />
+        <img
+          src="14.png"
+          alt="Featured Tinting Project - Mobile"
+          class="hero-detail-mobile w-100 h-100 object-fit-cover"
+        />
         <div class="hero-detail-overlay"></div>
       </div>
     </section>
@@ -1125,16 +1599,39 @@
     <!-- Contact -->
     <section id="contact" class="section section-overlay">
       <div class="container">
-        <h2 class="section-title text-white" data-aos="fade-up">Get Your Free Quote</h2>
+        <h2 class="section-title text-white" data-aos="fade-up">
+          Get Your Free Quote
+        </h2>
         <div class="row">
           <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
             <div class="contact-form">
               <form id="contactForm">
                 <div class="row">
-                  <div class="col-md-6 mb-3"><input type="text" class="form-control" placeholder="Your Name" required /></div>
-                  <div class="col-md-6 mb-3"><input type="email" class="form-control" placeholder="Your Email" required /></div>
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </div>
                 </div>
-                <div class="mb-3"><input type="tel" class="form-control" placeholder="Your Phone" required /></div>
+                <div class="mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="Your Phone"
+                    required
+                  />
+                </div>
                 <div class="mb-3">
                   <select class="form-control" required>
                     <option value="">Select Service Type</option>
@@ -1146,8 +1643,17 @@
                     <option value="custom">Custom Design Solutions</option>
                   </select>
                 </div>
-                <div class="mb-3"><textarea class="form-control" rows="4" placeholder="Tell us about your project..." required></textarea></div>
-                <button type="submit" class="btn btn-contact w-100">Send Message</button>
+                <div class="mb-3">
+                  <textarea
+                    class="form-control"
+                    rows="4"
+                    placeholder="Tell us about your project..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-contact w-100">
+                  Send Message
+                </button>
               </form>
             </div>
           </div>
@@ -1155,23 +1661,42 @@
             <div class="contact-details">
               <div class="contact-detail-item">
                 <i class="bi bi-telephone"></i>
-                <div><h4>Phone</h4><p>(916) 529-5624</p></div>
+                <div>
+                  <h4>Phone</h4>
+                  <p>(916) 529-5624</p>
+                </div>
               </div>
               <div class="contact-detail-item">
                 <i class="bi bi-geo-alt"></i>
-                <div><h4>Address</h4><p>9220 Greenback Ln, Orangevale, CA 95662</p></div>
+                <div>
+                  <h4>Address</h4>
+                  <p>9220 Greenback Ln, Orangevale, CA 95662</p>
+                </div>
               </div>
               <div class="contact-detail-item">
                 <i class="bi bi-envelope"></i>
-                <div><h4>Email</h4><p>info@sunblocktint.com</p></div>
+                <div>
+                  <h4>Email</h4>
+                  <p>info@sunblocktint.com</p>
+                </div>
               </div>
               <div class="contact-detail-item">
                 <i class="bi bi-clock"></i>
-                <div><h4>Business Hours</h4><p>Mon-Fri: 8AM-6PM | Sat: 9AM-4PM | Sun: Closed</p></div>
+                <div>
+                  <h4>Business Hours</h4>
+                  <p>Mon-Fri: 8AM-6PM | Sat: 9AM-4PM | Sun: Closed</p>
+                </div>
               </div>
             </div>
             <div class="mt-4">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.321398745632!2d-121.08752252432918!3d38.72063527184499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b3e4f4d8e9c8d%3A0x5c8e9b7a3a1c6a9f!2s9220%20Greenback%20Ln%20%23C%2C%20Orangevale%2C%20CA%2095662!5e0!3m2!1sen!2sus!4v1729276800000!5m2!1sen!2sus" width="100%" height="300" style="border:0; border-radius:12px" allowfullscreen loading="lazy"></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.321398745632!2d-121.08752252432918!3d38.72063527184499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b3e4f4d8e9c8d%3A0x5c8e9b7a3a1c6a9f!2s9220%20Greenback%20Ln%20%23C%2C%20Orangevale%2C%20CA%2095662!5e0!3m2!1sen!2sus!4v1729276800000!5m2!1sen!2sus"
+                width="100%"
+                height="300"
+                style="border: 0; border-radius: 12px"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -1184,10 +1709,16 @@
         <div class="row">
           <div class="col-md-4 mb-4 mb-md-0">
             <h3>Sunblock Window Tint</h3>
-            <p>Stay Cool, Look Sharp — Premium Window Tint for Style & Protection. Serving Orangevale and surrounding areas with the highest quality tinting solutions since 2013.</p>
+            <p>
+              Stay Cool, Look Sharp — Premium Window Tint for Style &
+              Protection. Serving Orangevale and surrounding areas with the
+              highest quality tinting solutions since 2013.
+            </p>
             <div class="social-icons">
               <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="bi bi-instagram"></i
+              ></a>
               <a href="#" class="social-icon"><i class="bi bi-google"></i></a>
             </div>
           </div>
@@ -1206,20 +1737,30 @@
             <h3>Contact Info</h3>
             <div class="footer-links">
               <p><i class="bi bi-telephone me-2"></i> (916) 529-5624</p>
-              <p><i class="bi bi-geo-alt me-2"></i> 9220 Greenback Ln, Orangevale, CA 95662</p>
+              <p>
+                <i class="bi bi-geo-alt me-2"></i> 9220 Greenback Ln,
+                Orangevale, CA 95662
+              </p>
               <p><i class="bi bi-envelope me-2"></i> info@sunblocktint.com</p>
-              <p><i class="bi bi-clock me-2"></i> Mon-Fri: 8AM-6PM | Sat: 9AM-4PM</p>
+              <p>
+                <i class="bi bi-clock me-2"></i> Mon-Fri: 8AM-6PM | Sat: 9AM-4PM
+              </p>
             </div>
           </div>
         </div>
         <div class="copyright">
-          <p>&copy; 2025 Sunblock Window Tint, LLC. All Rights Reserved. | Premium Tinting Solutions Since 2013</p>
+          <p>
+            &copy; 2025 Sunblock Window Tint, LLC. All Rights Reserved. |
+            Premium Tinting Solutions Since 2013
+          </p>
         </div>
       </div>
     </footer>
 
     <!-- Floating Call Button -->
-    <a href="tel:9165295624" class="floating-call"><i class="bi bi-telephone"></i></a>
+    <a href="tel:9165295624" class="floating-call"
+      ><i class="bi bi-telephone"></i
+    ></a>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1239,7 +1780,9 @@
         const preloader = document.getElementById("preloader");
         setTimeout(() => {
           preloader.style.opacity = "0";
-          setTimeout(() => { preloader.style.display = "none"; }, 1000);
+          setTimeout(() => {
+            preloader.style.display = "none";
+          }, 1000);
         }, 2000);
       });
 
@@ -1248,8 +1791,8 @@
         navbar.classList.toggle("scrolled", window.scrollY > 50);
       });
 
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute("href"));
           if (target) {
@@ -1262,24 +1805,29 @@
         });
       });
 
-      document.getElementById("contactForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-        alert("Thank you for your message! We will contact you soon.");
-        this.reset();
-      });
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thank you for your message! We will contact you soon.");
+          this.reset();
+        });
 
       window.addEventListener("scroll", () => {
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll(".nav-link");
         let currentSection = "";
-        sections.forEach(section => {
+        sections.forEach((section) => {
           const sectionTop = section.offsetTop - 100;
           const sectionHeight = section.clientHeight;
-          if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+          if (
+            pageYOffset >= sectionTop &&
+            pageYOffset < sectionTop + sectionHeight
+          ) {
             currentSection = section.getAttribute("id");
           }
         });
-        navLinks.forEach(link => {
+        navLinks.forEach((link) => {
           link.classList.remove("active");
           if (link.getAttribute("href") === "#" + currentSection) {
             link.classList.add("active");
@@ -1288,12 +1836,14 @@
       });
 
       document.addEventListener("DOMContentLoaded", () => {
-        const items = document.querySelectorAll("#video-gallery .gallery-item.video-item");
-        items.forEach(item => {
+        const items = document.querySelectorAll(
+          "#video-gallery .gallery-item.video-item"
+        );
+        items.forEach((item) => {
           const video = item.querySelector("video");
           item.addEventListener("click", async (e) => {
             e.stopPropagation();
-            items.forEach(i => {
+            items.forEach((i) => {
               const v = i.querySelector("video");
               if (v !== video && !v.paused) {
                 v.pause();
@@ -1313,7 +1863,9 @@
               item.classList.remove("playing");
             }
           });
-          video.addEventListener("ended", () => item.classList.remove("playing"));
+          video.addEventListener("ended", () =>
+            item.classList.remove("playing")
+          );
         });
       });
     </script>
