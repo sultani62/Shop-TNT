@@ -587,7 +587,7 @@
       }
 
       /* Video Gallery */
-      #video-gallery .gallery-item.video-item {
+      /* #video-gallery .gallery-item.video-item {
         height: 0;
         padding-bottom: 100%;
         position: relative;
@@ -657,8 +657,91 @@
           font-size: 2.2rem;
           padding: 16px;
         }
+      /* } */
+      #video-gallery .container {
+        max-width: 100%;
+        padding: 0 16px;
       }
 
+      #video-gallery .video-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin: 0 -8px;
+        padding: 0 8px;
+      }
+      /* 
+      #video-gallery .gallery-item.video-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        cursor: pointer;
+        background: #000;
+        transition: transform 0.3s ease;
+        flex: 1 1 calc(50% - 8px); 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 16 / 9;
+      }
+       */
+      #video-gallery .gallery-item.video-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        cursor: pointer;
+        background: transparent;
+        transition: transform 0.3s ease;
+        flex: 1 1 calc(50% - 8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 8 / 9; /* ← Changed from 16/9 to 8/9 → DOUBLE HEIGHT */
+        height: 60%;
+      }
+      /* #video-gallery .gallery-item.video-item video {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+        object-position: 0% 0%; 
+        display: block;
+      } */
+      #video-gallery .gallery-item.video-item video {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+        object-position: 50% 0%; /* Top Center */
+        display: block;
+      }
+
+      /* Optional: Reduce height on mobile */
+      @media (max-width: 767.98px) {
+        #video-gallery .gallery-item.video-item video {
+          height: 60vh;
+        }
+      }
+      #video-gallery .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        transition: opacity 0.4s ease;
+        pointer-events: auto;
+      }
+
+      #video-gallery .gallery-item.playing .gallery-overlay {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      @media (max-width: 767.98px) {
+        #video-gallery .gallery-item.video-item {
+          flex: 1 1 100%;
+        }
+      }
       /* Process */
       .process-section {
         background: var(--gradient-primary);
@@ -1395,7 +1478,7 @@
     </section>
 
     <!-- Video Gallery -->
-    <section id="video-gallery" class="section gallery-section">
+    <!-- <section id="video-gallery" class="section gallery-section">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">Our Work in Motion</h2>
         <div class="row g-4">
@@ -1417,8 +1500,26 @@
           </div>
         </div>
       </div>
+    </section> -->
+    <section id="video-gallery" class="section gallery-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Our Work in Motion</h2>
+        <div class="video-row">
+          <div class="gallery-item video-item" role="button" tabindex="0">
+            <video src="vid/V-1.mp4" loop playsinline></video>
+            <div class="gallery-overlay">
+              <i class="bi bi-play-fill zoom-icon"></i>
+            </div>
+          </div>
+          <div class="gallery-item video-item" role="button" tabindex="0">
+            <video src="vid/V-3.mp4" loop playsinline></video>
+            <div class="gallery-overlay">
+              <i class="bi bi-play-fill zoom-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
     <!-- Process -->
     <section class="section process-section">
       <div class="container">
@@ -1939,6 +2040,23 @@
           });
         }
       });
+      document
+        .querySelectorAll("#video-gallery .video-item")
+        .forEach((item) => {
+          const video = item.querySelector("video");
+          const overlay = item.querySelector(".gallery-overlay");
+
+          overlay.addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (video.paused) {
+              video.play();
+              item.classList.add("playing");
+            } else {
+              video.pause();
+              item.classList.remove("playing");
+            }
+          });
+        });
     </script>
   </body>
 </html>
