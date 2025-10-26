@@ -1914,28 +1914,23 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const mobileVideo = document.getElementById("mobileVideo");
+        const placeholder = document.getElementById("videoPlaceholder");
 
+        // فقط در موبایل
         if (window.innerWidth < 768 && mobileVideo) {
-          const playPromise = mobileVideo.play();
-
-          if (playPromise !== undefined) {
-            playPromise
-              .then(() => {
-                console.log("Mobile video autoplay started ✅");
-              })
-              .catch(() => {
-                console.warn(
-                  "Autoplay blocked, waiting for user interaction..."
-                );
-                document.addEventListener(
-                  "touchstart",
-                  () => {
-                    mobileVideo.play();
-                  },
-                  { once: true }
-                );
-              });
-          }
+          // وقتی ویدیو کامل آماده پخش شد
+          mobileVideo.addEventListener("canplaythrough", () => {
+            placeholder.style.opacity = "0";
+            placeholder.style.transition = "opacity 0.8s ease";
+            setTimeout(() => (placeholder.style.display = "none"), 800);
+            mobileVideo.play().catch(() => {
+              document.addEventListener(
+                "touchstart",
+                () => mobileVideo.play(),
+                { once: true }
+              );
+            });
+          });
         }
       });
     </script>
